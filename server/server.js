@@ -3,6 +3,7 @@ const cors = require('cors');
 require('dotenv').config()
 
 const app = express();
+const userModel = require('./models/user')
 
 //Middleware
 app.use(cors())
