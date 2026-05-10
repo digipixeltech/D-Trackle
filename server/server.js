@@ -10,7 +10,7 @@ app.use(express.json())
 
 // Test Route
 app.get("/", (req, res) => {
-   res.send(`${PORT}`);
+   res.render();
 });
 
 const PORT = process.env.PORT || 3000;
