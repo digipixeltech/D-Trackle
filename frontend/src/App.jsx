@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { useEffect } from "react";
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
   }, []);
 
   return (
-    <h1>React Frontend</h1>
+    <h1>ghk</h1>
   );
 }
 export default App

@@ -2,11 +2,11 @@
   "name": "d-trackle",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
    "scripts": {
-    "client": "npm run dev --prefix client",
-    "server": "node server/app.js",
-    "dev": "concurrently \"npm run client\" \"npm run server\""
+    "frontend": "npm run dev --prefix frontend",
+    "backend": "node backend/app.js",
+    "dev": "concurrently \"npm run frontend\" \"npm run backend\""
   },
   "repository": {
     "type": "git",

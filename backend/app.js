@@ -11,13 +11,17 @@ app.get("/api/hello", (req, res) => {
   res.json({ message: "Hello from backend" });
 });
 
+app.get('/hey', (req, res) => {
+  res.render("")
+})
+
 app.use(express.static(
-  path.join(__dirname, "../client/dist")
+  path.join(__dirname, "../FrontEnd/dist")
 ));
 
 app.use((req, res) => {
   res.sendFile(
-    path.join(__dirname, "../client/dist/index.html")
+    path.join(__dirname, "../FrontEnd/dist/index.html")
   );
 });
 
