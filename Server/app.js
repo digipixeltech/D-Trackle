@@ -1,15 +1,26 @@
-const express = require('express');
+const express = require("express");
+const cors = require("cors");
+const path = require("path");
+
 const app = express();
-const cors = require('cors');
-const port = 3000;
 
-app.use(cors())
-app.use(express.json())
+app.use(cors());
+app.use(express.json());
 
-app.set('view engine', 'jsx')
-
-app.get("/", (req, res) => {
-   res.send('body');
+app.get("/api/hello", (req, res) => {
+  res.json({ message: "Hello from backend" });
 });
-app.listen(3000);
 
+app.use(express.static(
+  path.join(__dirname, "../client/dist")
+));
+
+app.use((req, res) => {
+  res.sendFile(
+    path.join(__dirname, "../client/dist/index.html")
+  );
+});
+
+app.listen(5000, () => {
+  console.log("Server running");
+});
