@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const uri = "mongodb+srv://digipixeltechsolution_db_user:oXYt9f9bQiVDWvUt@dtrackle.kwshdny.mongodb.net/?appName=Dtrackle";
+const uri = "mongodb://digipixeltechsolution_db_user:oXYt9f9bQiVDWvUt@dtrackle.kwshdny.mongodb.net/?appName=Dtrackle";
 
 const clientOptions = { serverApi: { version: '1', strict: true, deprecationErrors: true } };
 
